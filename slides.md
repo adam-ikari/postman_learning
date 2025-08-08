@@ -170,7 +170,7 @@ backgroundSize: contain
 https://jsonplaceholder.typicode.com/posts/{{user_id}}
 ```
 
-### 设置变量
+### 使用预请求脚本设置变量
 
 ```javascript
 pm.variables.set("userid", 1);
