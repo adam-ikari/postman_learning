@@ -50,8 +50,6 @@ Postman是一个强大的API平台，用于构建和使用API。它提供了以�
 - 👥 **协作功能** - 团队成员共享和协作
 - 🔄 **工作流** - 创建复杂的API工作流
 - 📊 **监控** - 监控API性能和可用性
-  <br>
-  <br>
 
 了解更多 [Postman官方文档](https://learning.postman.com/)
 
