@@ -73,85 +73,39 @@ backgroundSize: contain
 - 造成前后端开发者的关系紧张，开发团队无法协同工作
 
 ---
+layout: full
+---
 
 # 全球开发者的选择
 
 全球众多公司和开发者使用Postman进行API开发和测试
 
-<div grid="~ cols-6 gap-4" class="gap-y-8">
-  <div class="text-center">
-    <img src="/logos/microsoft-logo-horizontal.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/stripe-logo-horizontal.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/meta-logo-horizontal.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/notion-symbol.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/salesforce-cloud-logo.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/mercedes-benz-logo-horizontal.png" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/datadog-logo.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/paypal-logo-horizontal.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/aws-small-logo.png" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/twitter-logo.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/cisco-devnet-black-logo.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/intuit-logo.png" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/mongodb-logo-horizontal.png" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/hubspot-logo.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/dolby-io.png" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/oracle-developers-logo.jpg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/slack-logo-horizontal.png" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/google-maps-logo-horizontal.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/mastercard-logo.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/adobe-logo-horizontal.png" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/uber-logo.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/miro-logo-stacked.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/anvil-logo.svg" class="h-8 mx-auto" />
-  </div>
-  <div class="text-center">
-    <img src="/logos/plaid-logo-stacked.png" class="h-8 mx-auto" />
-  </div>
-</div>
+<LogoGrid :logos="[
+  { name: 'Microsoft', url: '/logos/microsoft-logo-horizontal.svg' },
+  { name: 'Stripe', url: '/logos/stripe-logo-horizontal.svg' },
+  { name: 'Meta', url: '/logos/meta-logo-horizontal.svg' },
+  { name: 'Notion', url: '/logos/notion-symbol.svg' },
+  { name: 'Salesforce', url: '/logos/salesforce-cloud-logo.svg' },
+  { name: 'Mercedes-Benz', url: '/logos/mercedes-benz-logo-horizontal.png' },
+  { name: 'Datadog', url: '/logos/datadog-logo.svg' },
+  { name: 'PayPal', url: '/logos/paypal-logo-horizontal.svg' },
+  { name: 'AWS', url: '/logos/aws-small-logo.png' },
+  { name: 'Twitter', url: '/logos/twitter-logo.svg' },
+  { name: 'Cisco', url: '/logos/cisco-devnet-black-logo.svg' },
+  { name: 'Intuit', url: '/logos/intuit-logo.png' },
+  { name: 'MongoDB', url: '/logos/mongodb-logo-horizontal.png' },
+  { name: 'Hubspot', url: '/logos/hubspot-logo.svg' },
+  { name: 'Dolby', url: '/logos/dolby-io.png' },
+  { name: 'Oracle', url: '/logos/oracle-developers-logo.jpg' },
+  { name: 'Slack', url: '/logos/slack-logo-horizontal.png' },
+  { name: 'Google Maps', url: '/logos/google-maps-logo-horizontal.svg' },
+  { name: 'Mastercard', url: '/logos/mastercard-logo.svg' },
+  { name: 'Adobe', url: '/logos/adobe-logo-horizontal.png' },
+  { name: 'Uber', url: '/logos/uber-logo.svg' },
+  { name: 'Miro', url: '/logos/miro-logo-stacked.svg' },
+  { name: 'Anvil', url: '/logos/anvil-logo.svg' },
+  { name: 'Plaid', url: '/logos/plaid-logo-stacked.png' }
+]" />
 
 ---
 transition: slide-up
