@@ -61,7 +61,7 @@ backgroundSize: contain
 ---
 transition: slide-up
 layout: image-right
-image: /public/Copilot_20250811_094236.png
+image: /Copilot_20250811_094236.png
 backgroundSize: contain
 ---
 
@@ -73,12 +73,90 @@ backgroundSize: contain
 - 造成前后端开发者的关系紧张，开发团队无法协同工作
 
 ---
-# 这些公司都在使用 Postman
+
+# 全球开发者的选择
+
+全球众多公司和开发者使用Postman进行API开发和测试
+
+<div grid="~ cols-6 gap-4" class="gap-y-8">
+  <div class="text-center">
+    <img src="/logos/microsoft-logo-horizontal.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/stripe-logo-horizontal.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/meta-logo-horizontal.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/notion-symbol.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/salesforce-cloud-logo.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/mercedes-benz-logo-horizontal.png" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/datadog-logo.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/paypal-logo-horizontal.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/aws-small-logo.png" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/twitter-logo.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/cisco-devnet-black-logo.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/intuit-logo.png" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/mongodb-logo-horizontal.png" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/hubspot-logo.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/dolby-io.png" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/oracle-developers-logo.jpg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/slack-logo-horizontal.png" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/google-maps-logo-horizontal.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/mastercard-logo.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/adobe-logo-horizontal.png" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/uber-logo.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/miro-logo-stacked.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/anvil-logo.svg" class="h-8 mx-auto" />
+  </div>
+  <div class="text-center">
+    <img src="/logos/plaid-logo-stacked.png" class="h-8 mx-auto" />
+  </div>
+</div>
 
 ---
 transition: slide-up
 layout: image-right
-image: /public/postman.png
+image: /postman.png
 backgroundSize: contain
 ---
 
@@ -98,7 +176,7 @@ Postman主界面示例
 ---
 transition: slide-up
 layout: image-right
-image: /public/first_request.png
+image: /first_request.png
 backgroundSize: contain
 ---
 
@@ -137,7 +215,7 @@ https://jsonplaceholder.typicode.com/posts/1
 ---
 transition: slide-up
 layout: image-right
-image: /public/http_methods.png
+image: /http_methods.png
 backgroundSize: contain
 ---
 
@@ -176,7 +254,7 @@ transition: slide-up
 ---
 transition: slide-up
 layout: image-right
-image: /public/env.png
+image: /env.png
 backgroundSize: contain
 ---
 
@@ -954,6 +1032,7 @@ pm.test("Response has required fields", function () {
 </div>
 
 ---
+
 
 # 总结
 
