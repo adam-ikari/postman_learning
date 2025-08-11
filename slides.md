@@ -23,22 +23,13 @@ API测试与开发的完整指南
   按空格进入下一页 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" style="width: 20px; display: inline-block; vertical-align: middle;" />
 </div>
 
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="在编辑器中打开" class="slidev-icon-btn">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/edit/edit-original.svg" style="width: 24px; display: inline-block;" />
-  </button>
-  <a href="https://postman.com" target="_blank" class="slidev-icon-btn">
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" style="width: 24px; display: inline-block;" />
-  </a>
-</div>
-
 <!--
 这是关于Postman的教程幻灯片，涵盖了Postman的基本使用方法、API测试和高级功能。
 -->
 
 ---
-
-## transition: fade-out
+transition: slide-up
+---
 
 # 什么是Postman?
 
@@ -52,6 +43,37 @@ Postman是一个强大的API平台，用于构建和使用API。它提供了以�
 - 📊 **监控** - 监控API性能和可用性
 
 了解更多 [Postman官方文档](https://learning.postman.com/)
+
+---
+transition: slide-up
+layout: image-right
+image: public/Copilot_20250810_172200.png
+backgroundSize: contain
+---
+
+# 为什么要使用 Postman 测试后端 API？
+
+<br>
+
+- 提高工作效率，后端与前端可以**独立测试**。
+- 确保后端实现与前端预期的接口**契约一致**，避免联调时的“**扯皮**”。
+
+---
+transition: slide-up
+layout: image-right
+image: /public/Copilot_20250811_094236.png
+backgroundSize: contain
+---
+
+# 不测试 API 的风险
+
+- API 的实际行为与文档不一致（如字段名错误、返回格式变化），客户在对接时会认为开发团队不专业，影响客户评价和产品销量。
+- 造成BUG进入生产环境，影响客户使用。
+- 沟通成本过高，DEBUG 时间过长。
+- 造成前后端开发者的关系紧张，开发团队无法协同工作
+
+---
+# 这些公司都在使用 Postman
 
 ---
 transition: slide-up
@@ -162,20 +184,21 @@ backgroundSize: contain
 
 这是一个URL中的变量
 
-<v-click>
+::v-clicks
 
-### url 变量
+- url 变量
 
-```text
-https://jsonplaceholder.typicode.com/posts/{{user_id}}
-```
+  ```text
+  https://jsonplaceholder.typicode.com/posts/{{user_id}}
+  ```
 
-### 使用预请求脚本设置变量
+- 使用预请求脚本设置变量
 
-```javascript
-pm.variables.set("userid", 1);
-```
-</v-click>
+  ```javascript
+  pm.variables.set("userid", 1);
+  ```
+
+::
 
 ---
 
