@@ -15,20 +15,16 @@ transition: slide-left
 mdc: true
 ---
 
-# Postman教程
+# Postman 初级教程
 
-API测试与开发的完整指南
+使用Postman调试和测试后端API
 
 <div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  按空格进入下一页 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" style="width: 20px; display: inline-block; vertical-align: middle;" />
+  按空格进入下一页 <img src="/postman-original.svg" style="width: 20px; display: inline-block; vertical-align: middle;" />
 </div>
 
-<!--
-这是关于Postman的教程幻灯片，涵盖了Postman的基本使用方法、API测试和高级功能。
--->
-
 ---
-transition: slide-up
+transition: slide-left
 ---
 
 # 什么是Postman?
@@ -45,7 +41,7 @@ Postman是一个强大的API平台，用于构建和使用API。它提供了以�
 了解更多 [Postman官方文档](https://learning.postman.com/)
 
 ---
-transition: slide-up
+transition: slide-left
 layout: image-right
 image: public/Copilot_20250810_172200.png
 backgroundSize: contain
@@ -53,13 +49,15 @@ backgroundSize: contain
 
 # 为什么要使用 Postman 测试后端 API？
 
+Postman 是一个很好的API测试工具，通过直观的UI界面，无需写代码就可以轻松地测试后端API。
+
 <br>
 
 - 提高工作效率，后端与前端可以**独立测试**。
 - 确保后端实现与前端预期的接口**契约一致**，避免联调时的“**扯皮**”。
 
 ---
-transition: slide-up
+transition: slide-left
 layout: image-right
 image: /Copilot_20250811_094236.png
 backgroundSize: contain
@@ -73,6 +71,7 @@ backgroundSize: contain
 - 造成前后端开发者的关系紧张，开发团队无法协同工作
 
 ---
+transition: slide-left
 layout: full
 ---
 
@@ -108,7 +107,7 @@ layout: full
 ]" />
 
 ---
-transition: slide-up
+transition: slide-left
 layout: image-right
 image: /postman.png
 backgroundSize: contain
@@ -118,17 +117,18 @@ backgroundSize: contain
 
 Postman主界面示例
 
-<v-clicks>
+::v-clicks
 
-- 顶部导航栏包含产品、定价、企业版等选项
+- 顶部导航栏包含产品、定价、企业版、账号登录等选项
 - 左侧边栏用于管理集合、环境和历史记录
-- 中央工作区用于创建和发送请求
+- 中央工作区用于发送请求和显示响应信息
+- 右侧边栏可以看到不同语言或者框架的请求代码片段
 - 底部状态栏显示当前状态和信息
 
-</v-clicks>
+::
 
 ---
-transition: slide-up
+transition: slide-left
 layout: image-right
 image: /first_request.png
 backgroundSize: contain
@@ -140,34 +140,33 @@ backgroundSize: contain
 
 ## 步骤
 
-::v-click
-1. 在地址栏输入URL: 
+::v-clicks
 
-```text
-https://jsonplaceholder.typicode.com/posts/1
-```
-::
-::v-click
-2. 确保选择了"GET"方法
-::
-::v-click
-3. 点击"Send"按钮
-::
-::v-click
-4. 查看响应结果
+- 1. 在地址栏输入URL:
 
-```json
-{
-  "userId": 1,
-  "id": 1,
-  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-}
-```
+  ```text
+  https://jsonplaceholder.typicode.com/posts/1
+  ```
+
+- 2. 确保选择了"GET"方法
+
+- 3. 点击"Send"按钮
+
+- 4. 查看响应结果
+
+  ```json
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  }
+  ```
+
 ::
 
 ---
-transition: slide-up
+transition: slide-left
 layout: image-right
 image: /http_methods.png
 backgroundSize: contain
@@ -176,6 +175,7 @@ backgroundSize: contain
 # Postman支持所有标准HTTP方法
 
 ::v-clicks
+
 - **GET** - 获取资源
 - **POST** - 创建新资源
 - **PUT** - 更新整个资源
@@ -183,30 +183,18 @@ backgroundSize: contain
 - **DELETE** - 删除资源
 - **HEAD** - 只获取响应头
 - **OPTIONS** - 获取服务器支持的选项
+
 ::
 
 ---
-transition: slide-up
+transition: slide-left
+layout: section
 ---
 
-# 环境和变量
-
-管理不同环境的配置信息
-
-## 变量类型
-
-<v-clicks>
-
-1. **环境变量** - 特定于环境 (如开发、测试、生产)
-2. **全局变量** - 跨环境使用
-3. **集合变量** - 特定于集合
-4. **数据变量** - 来自外部数据文件
-
-</v-clicks>
-
+# 变量
 
 ---
-transition: slide-up
+transition: slide-left
 layout: image-right
 image: /env.png
 backgroundSize: contain
@@ -233,27 +221,61 @@ backgroundSize: contain
 ::
 
 ---
+transition: slide-left
+layout: section
+---
 
 # Token认证配置详解
 
 详细配置各种Token认证方式
 
-<div grid="~ cols-2 gap-4">
-<div>
+---
+transition: slide-up
+layout: image-right
+image: /postman-beartoken.png
+backgroundSize: contain
+---
 
-## Bearer Token认证
+# Bearer Token认证
 
-<v-clicks>
+Bearer Token 认证是最常用的 Token 认证方式
 
-- 最常用的Token认证方式
-- 在Authorization选项卡中选择Bearer Token
-- 直接输入Token或使用变量
+::v-clicks
 
-```http
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
-```
+- 在 Authorization 选项卡中选择 Bearer Token
+- 直接输入 Token 或使用变量
 
-</v-clicks>
+  ```http
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+  ```
+
+  或者 使用变量
+
+  ```javascript
+  pm.variables.set("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...");
+  ```
+
+  ```http
+  Authorization: Bearer {{token}}
+  ```
+
+  ::
+
+---
+
+# 其他 Token 认证
+
+::v-clicks
+
+- OAuth 2.0
+- API Key
+- Basic Auth
+- Digest Auth
+- 等等
+
+::
+
+---
 
 ## 环境变量设置
 
@@ -272,13 +294,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 </v-clicks>
 
-</div>
-<div>
-
 ![Postman环境变量设置](https://miro.medium.com/max/1400/1*e4628xZJ5E9r-fGj6JWY1Q.png)
-
-</div>
-</div>
 
 ---
 
@@ -986,7 +1002,6 @@ pm.test("Response has required fields", function () {
 </div>
 
 ---
-
 
 # 总结
 
