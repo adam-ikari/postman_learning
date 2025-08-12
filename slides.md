@@ -29,16 +29,16 @@ transition: slide-left
 
 # 什么是Postman?
 
-Postman是一个强大的API平台，用于构建和使用API。它提供了以下特性：
+Postman 是一个强大的 API 平台，用于构建和使用 API。它提供了以下特性：
 
-- 🚀 **API客户端** - 轻松发送各种HTTP请求
+- 🚀 **API 客户端** - 轻松发送各种 HTTP 请求
 - 🧪 **测试自动化** - 编写和运行测试用例
-- 📚 **文档生成** - 自动生成API文档
+- 📚 **文档生成** - 自动生成 API 文档
 - 👥 **协作功能** - 团队成员共享和协作
-- 🔄 **工作流** - 创建复杂的API工作流
-- 📊 **监控** - 监控API性能和可用性
+- 🔄 **工作流** - 创建复杂的 API 工作流
+- 📊 **监控** - 监控 API 性能和可用性
 
-了解更多 [Postman官方文档](https://learning.postman.com/)
+了解更多 [Postman 官方文档](https://learning.postman.com/)
 
 ---
 transition: slide-left
@@ -49,7 +49,7 @@ backgroundSize: contain
 
 # 为什么要使用 Postman 测试后端 API？
 
-Postman 是一个很好的API测试工具，通过直观的UI界面，无需写代码就可以轻松地测试后端API。
+Postman 是一个很好的 API 测试工具，通过直观的 UI 界面，无需写代码就可以轻松地测试后端 API。
 
 <br>
 
@@ -66,9 +66,9 @@ backgroundSize: contain
 # 不测试 API 的风险
 
 - API 的实际行为与文档不一致（如字段名错误、返回格式变化），客户在对接时会认为开发团队不专业，影响客户评价和产品销量。
-- 造成BUG进入生产环境，影响客户使用。
+- 造成 BUG 进入生产环境，影响客户使用。
 - 沟通成本过高，DEBUG 时间过长。
-- 造成前后端开发者的关系紧张，开发团队无法协同工作
+- 造成前后端开发者的关系紧张，开发团队无法协同工作。
 
 ---
 transition: slide-left
@@ -109,9 +109,23 @@ layout: full
 ---
 transition: slide-left
 layout: image-right
+image: /postman-first-use.png
+backgroundSize: contain
+---
+
+# 首次使用
+
+第一次打开Postman时，会看到右侧的账号登录页。
+
+可以直接跳过登录，选择“Continue without an acount”。
+
+---
+transition: slide-left
+layout: image-right
 image: /postman.png
 backgroundSize: contain
 ---
+
 
 # Postman界面概览
 
@@ -128,7 +142,7 @@ Postman主界面示例
 ::
 
 ---
-transition: slide-left
+transition: slide-up
 layout: image-right
 image: /first_request.png
 backgroundSize: contain
@@ -148,11 +162,11 @@ backgroundSize: contain
   https://jsonplaceholder.typicode.com/posts/1
   ```
 
-- 2. 确保选择了"GET"方法
+- 2. 选择"GET"方法
 
 - 3. 点击"Send"按钮
 
-- 4. 查看响应结果
+- 4. 查看响应体原始格式或者显示可视化的结果呈现。
 
   ```json
   {
@@ -166,13 +180,47 @@ backgroundSize: contain
 ::
 
 ---
+transition: slide-up
+layout: image-right
+image: /first_request.png
+backgroundSize: contain
+---
+
+::v-clicks
+
+- 5. 点击右侧"Code"按钮查看生成的等效请求代码
+
+  Python 代码：
+
+  ```python
+  import requests
+
+  url = "https://jsonplaceholder.typicode.com/posts/1"
+
+  payload = {}
+  headers = {}
+
+  response = requests.request("GET", url, headers=headers, data=payload)
+
+  print(response.text)
+  ```
+
+  Curl 命令：
+
+  ```bash
+  curl --location 'https://jsonplaceholder.typicode.com/posts/1'
+  ```
+
+::
+
+---
 transition: slide-left
 layout: image-right
 image: /http_methods.png
 backgroundSize: contain
 ---
 
-# Postman支持所有标准HTTP方法
+# Postman 支持所有标准HTTP方法
 
 ::v-clicks
 
@@ -274,27 +322,6 @@ Bearer Token 认证是最常用的 Token 认证方式
 - 等等
 
 ::
-
----
-
-## 环境变量设置
-
-<v-clicks>
-
-- 点击右上角环境选择器
-- 点击齿轮图标打开环境管理
-- 创建新环境并添加变量
-- 设置变量名和初始值
-
-常用变量示例:
-
-- `base_url`: https://api.example.com
-- `auth_token`: 用户认证Token
-- `user_id`: 当前用户ID
-
-</v-clicks>
-
-![Postman环境变量设置](https://miro.medium.com/max/1400/1*e4628xZJ5E9r-fGj6JWY1Q.png)
 
 ---
 
