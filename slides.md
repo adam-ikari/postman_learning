@@ -175,7 +175,7 @@ backgroundSize: contain
 - 1. 在地址栏输入URL:
 
   ```text
-  https://jsonplaceholder.typicode.com/posts/1
+  http://localhost:3001/posts/1
   ```
 
 - 2. 选择"GET"方法
@@ -210,7 +210,7 @@ backgroundSize: contain
   ```python
   import requests
 
-  url = "https://jsonplaceholder.typicode.com/posts/1"
+  url = "http://localhost:3001/posts/1"
 
   payload = {}
   headers = {}
@@ -223,7 +223,7 @@ backgroundSize: contain
   Curl 命令：
 
   ```bash
-  curl --location 'https://jsonplaceholder.typicode.com/posts/1'
+  curl --location 'http://localhost:3001/posts/1'
   ```
 
 ::
@@ -271,14 +271,14 @@ backgroundSize: contain
 - url 变量
 
   ```text
-  https://jsonplaceholder.typicode.com/posts/{{user_id}}
+  http://localhost:3001/posts/{{user_id}}
 
   ```
 
 - url 参数
 
   ```text
-  https://jsonplaceholder.typicode.com/posts/1?title={{ title }}
+  http://localhost:3001/posts/1?title={{ title }}
   ```
 
 - Request Body 变量
@@ -302,10 +302,53 @@ backgroundSize: contain
 Postman 工具中的变量有类型
 
 ::v-clicks
-
 - 环境变量
 - 全局变量
 - Vault 变量
+::
+
+---
+
+# 环境变量 (Environment Variables)
+
+环境变量是与特定环境关联的变量，适用于需要在不同环境（如开发、测试、生产）之间切换的情况。
+
+::v-clicks
+
+- **作用范围**：仅在选定的环境下有效
+- **适用场景**：管理不同环境的配置，如 base_url、auth_token、数据库连接信息等
+- **特点**：可以在不同环境之间切换，每个环境可以有同名但不同值的变量
+- **示例**：开发环境使用 http://localhost:3000，生产环境使用 https://api.example.com
+
+::
+
+---
+
+# 全局变量 (Global Variables)
+
+全局变量是在整个Postman环境中都可以访问的变量，不局限于特定环境。
+
+::v-clicks
+
+- **作用范围**：在整个Postman工作空间中都可以访问
+- **适用场景**：存储在所有环境中都需要使用的值，如用户ID、通用配置等
+- **优先级**：环境变量会覆盖同名的全局变量
+- **示例**：用户名、常用请求头等在所有环境中都相同的值
+
+::
+
+---
+
+# Vault 变量 (Vault Secrets)
+
+Vault变量是用于存储敏感信息的安全变量，仅在本地可用，不会同步到Postman云端。
+
+::v-clicks
+
+- **作用范围**：仅在本地Postman实例中可用
+- **适用场景**：存储敏感数据，如API密钥、密码、访问令牌等
+- **安全性**：只有你本人可以访问和使用这些值，不会与团队成员共享或同步到云端
+- **特点**：提供最高级别的安全保护，适用于机密信息
 
 ::
 
