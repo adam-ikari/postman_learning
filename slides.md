@@ -357,6 +357,123 @@ transition: slide-left
 layout: section
 ---
 
+# 实际操作示例
+
+---
+transition: slide-up
+layout: image-right
+image: /postman-request-example.png
+backgroundSize: contain
+---
+
+# 创建新用户示例
+
+使用POST方法创建新用户
+
+::v-clicks
+
+- 选择POST方法
+- URL: `http://localhost:3001/users`
+- 在Body选项卡中选择raw并设置为JSON格式
+- 输入以下内容：
+
+  ```json
+  {
+    "name": "Test User",
+    "username": "testuser",
+    "email": "test@example.com",
+    "phone": "123-456-7890",
+    "website": "example.com"
+  }
+  ```
+
+- 点击Send按钮
+- 查看返回的200状态码和创建的用户信息
+
+::
+
+---
+transition: slide-up
+layout: image-right
+image: /postman-request-example.png
+backgroundSize: contain
+---
+
+# 用户登录示例
+
+使用POST方法模拟用户登录
+
+::v-clicks
+
+- 选择POST方法
+- URL: `http://localhost:3001/login`
+- 在Body选项卡中选择raw并设置为JSON格式
+- 输入以下内容：
+
+  ```json
+  {
+    "username": "Bret",
+    "password": "password123"
+  }
+  ```
+
+- 点击Send按钮
+- 查看返回的token和用户信息
+
+::
+
+---
+transition: slide-up
+layout: image-right
+image: /postman-auth-example.png
+backgroundSize: contain
+---
+
+# 使用Bearer Token认证
+
+访问受保护的资源
+
+::v-clicks
+
+- 选择GET方法
+- URL: `http://localhost:3001/profile`
+- 在Authorization选项卡中选择Bearer Token
+- 在Token字段中输入从登录接口获取的token
+- 点击Send按钮
+- 查看返回的用户资料信息
+
+::
+
+---
+transition: slide-up
+layout: image-right
+image: /postman-search-example.png
+backgroundSize: contain
+---
+
+# 搜索功能示例
+
+使用查询参数搜索资源
+
+::v-clicks
+
+- 选择GET方法
+- URL: `http://localhost:3001/search/posts?q=aut`
+- 点击Send按钮
+- 查看返回的匹配结果
+
+- 也可以搜索用户：
+  ```text
+  http://localhost:3001/search/users?q=Leanne
+  ```
+
+::
+
+---
+transition: slide-left
+layout: section
+---
+
 # Token认证配置详解
 
 详细配置各种Token认证方式
@@ -393,6 +510,10 @@ Bearer Token 认证是最常用的 Token 认证方式
 
 ::
 
+---
+layout: image-right
+image: /http_methods.png
+backgroundSize: contain
 ---
 
 # 其他 Token 认证
